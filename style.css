@@ -1,0 +1,74 @@
+
+
+.circle {
+  position: relative;
+  /*margin: 1em auto;*/
+  border: solid 2px blue;
+  padding: 0;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  list-style: none;
+}
+
+.slice {
+  overflow: hidden;
+  position: absolute;
+  top: 0; right: 0;
+  width: 50%; height: 50%;
+  transform-origin: 0% 100%;
+  border: solid 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*transform: skewY(-22.5deg);*/
+}
+
+/*the first child doesnt rotate*/
+#one {
+  transform: rotate(0deg) skewX(-17deg);
+  border: 2px solid pink;
+  border-top: 2px solid red;
+  border-right: 2px solid green;
+  border-top-right-radius: 100%;
+}
+
+#two {
+  transform: rotate(72deg) skewX(-17deg);
+  border: 2px solid yellow;
+  border-top-right-radius: 100%;
+}
+
+#three {
+  transform: rotate(144deg) skewX(-17deg);
+  border-top-right-radius: 100%;
+}
+
+#four {
+  transform: rotate(216deg) skewX(-17deg);
+  border-top-right-radius: 100%;
+}
+
+#five {
+  transform: rotate(288deg) skewX(-17deg);
+  border-top-right-radius: 100%;
+}
+
+
+.slice-num {
+  transform: rotate(45deg);
+}
+
+
+/*.slice-num {
+  position: absolute;
+  left: -100%;
+  width: 200%; height: 200%;
+  border-radius: 50%;
+  border: 2px solid hotpink;
+}
+
+.slice:first-child .slice-num {
+  transform: skewY(22.5deg); *//* unskew slice contents
+
+
