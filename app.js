@@ -5,7 +5,7 @@ $(document).ready(() => {
 //divide circle deg (360deg) by the number of slices(37), generate slice with appropriate
 //color, number and degree rotation and then append to div with class "wheel".
 console.log('script linked');
-
+let circle = $('.circle');
 
 let rouletteNums = [0,32,15,19,4,21,2,25,17,34,6,27,13,36,11,30,8,23,10,5,24,16,33,1,20,14,31,9,22,18,29,7,28,12,35,3,26];
 
@@ -31,12 +31,25 @@ const generateSlices = () => {
     }
     colorChoice = !colorChoice;
 
-    arr.push(`make slice with number ${slice} that is rotated ${degreeCounter} degrees and is the color ${color}`)
-  })
-  return arr;
+    //create slice and give it color and transform deg
+    let newSlice = $(`<div></div>`);
+    newSlice.addClass('slice');
+    newSlice.addClass(color);
+    newSlice.css('transform', `rotate(${degreeCounter}deg)`);
+
+    //create sliceNum, add class and append to newSlice
+    let sliceNum = $(`<div>${slice}</div>`);
+    sliceNum.addClass('slice-num');
+    newSlice.append(sliceNum);
+
+    // append sliceNum to circle
+    circle.append(newSlice);
+    //arr.push(`make slice with number ${slice} that is rotated ${degreeCounter} degrees and is the color ${color}`)
+  });
+  //return arr;
 }
 
-// generateSlices();
+generateSlices();
 
 
 }); //closes document

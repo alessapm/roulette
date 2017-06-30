@@ -1,8 +1,10 @@
-
-
+.container {
+  height: 100%;
+  width: 100%;
+}
 .circle {
-  position: relative;
-  /*margin: 1em auto;*/
+  /*position: relative;*/
+  margin: 1em auto;
   border: solid 2px blue;
   padding: 0;
   width: 600px;
@@ -14,18 +16,56 @@
 .slice {
   overflow: hidden;
   position: absolute;
-  top: 0; right: 0;
-  width: 50%; height: 50%;
+  /*top: 0; right: 0;*/
+  width: 50px;
+  height: 50%;
   transform-origin: 0% 100%;
   border: solid 1px black;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /*justify-content: center;*/
+  /*align-items: center;*/
   /*transform: skewY(-22.5deg);*/
+  /*border-top-right-radius: 60%;*/
+  /*padding-top: 50px;*/
+  border-bottom-right-radius: 100%;
 }
 
-/*the first child doesnt rotate*/
-#one {
+.slice-num {
+  font-size: 1.5em;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.red {
+  background-color: red;
+}
+
+.black {
+  background-color: black;
+  color: white;
+}
+
+.green {
+  background-color: green;
+}
+
+.ball-area {
+  height: 350px;
+  width: 350px;
+  border: 1px yellow solid;
+  background-color: rgba(255,255,255,.8);
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  /*top: 20%;
+  left: 20%;*/
+}
+
+
+
+
+
+/*#one {
   transform: rotate(0deg) skewX(-17deg);
   border: 2px solid pink;
   border-top: 2px solid red;
@@ -53,11 +93,8 @@
   transform: rotate(288deg) skewX(-17deg);
   border-top-right-radius: 100%;
 }
+*/
 
-
-.slice-num {
-  transform: rotate(45deg);
-}
 
 
 /*.slice-num {
